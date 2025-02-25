@@ -1,0 +1,226 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNfPOAV/ZPU+MFH/IjwPOiI",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/kain21231/assignment-2-to-5/blob/main/Exercise%202\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"Hello, world!\")\n",
+        "\n",
+        "# DO NOT REMOVE: Mark this question as completed"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "SQVRPxLBb_mV",
+        "outputId": "48b15660-23cf-452d-b6ce-eb435d1793ca"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hello, world!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Complete the function\n",
+        "#Complete the function\n",
+        "def get_expected_cost(house_description):\n",
+        "    value=0\n",
+        "    return value\n",
+        "\n",
+        "#if house with 1 beds and 1 baths=120000;\n",
+        "#if house with 2 beds and 1 baths =150000;\n",
+        "#complete the function\n",
+        "#def get_expected_cost( \"1house,3 beds and 2 baths\".);\n",
+        "#value=190000\n",
+        "#Complete the function\n",
+        "def get_expected_cost(house_description):\n",
+        "    value=0\n",
+        "    return value\n",
+        "#hint(room=8000)\n",
+        "#input=room +3 beds+2 baths"
+      ],
+      "metadata": {
+        "id": "18pQBl8LflbL"
+      },
+      "execution_count": 16,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# get_expected_cost is already defined\n",
+        "def get_expected_cost(bedrooms, bathrooms):\n",
+        "    return 40000 * bedrooms + 20000 * bathrooms  # Example formula\n",
+        "\n",
+        "# TODO: Use the get_expected_cost function to fill in each value\n",
+        "option_one = get_expected_cost(3, 3)\n",
+        "option_two = get_expected_cost(5, 4)\n",
+        "option_three = get_expected_cost(3, 2)\n",
+        "option_four = get_expected_cost(3, 1)\n",
+        "\n",
+        "print(option_one)\n",
+        "print(option_two)\n",
+        "print(option_three)\n",
+        "print(option_four)\n",
+        "\n",
+        "# Check your answer"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "vu8iqOk4l7dd",
+        "outputId": "3cda2416-381c-4eb4-c296-1f6f118cfae7"
+      },
+      "execution_count": 26,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "180000\n",
+            "280000\n",
+            "160000\n",
+            "140000\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Function to calculate the cost of painting a room\n",
+        "def get_cost(sqft_walls, sqft_ceiling, sqft_per_gallon, cost_per_gallon):\n",
+        "    total_sqft = sqft_walls + sqft_ceiling\n",
+        "    gallons_needed = total_sqft / sqft_per_gallon\n",
+        "    cost = gallons_needed * cost_per_gallon\n",
+        "    return cost\n",
+        "# test case\n",
+        "print(get_cost(428, 136, 240, 12))# Expected output: 28.200\n",
+        "\n",
+        "# Check your answer"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "t8nf3rhynZTy",
+        "outputId": "3894fae3-d541-451c-9ff1-d1839134fdf5"
+      },
+      "execution_count": 32,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "28.200000000000003\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Assume get_cost function is already defined\n",
+        "def get_cost(sqft_walls, sqft_ceiling, sqft_per_gallon, cost_per_gallon):\n",
+        "    total_sqft = sqft_walls + sqft_ceiling\n",
+        "    gallons_needed = total_sqft / sqft_per_gallon\n",
+        "    cost = gallons_needed * cost_per_gallon\n",
+        "    return cost\n",
+        "\n",
+        "# TODO: Set the project_cost variable to the cost of the project\n",
+        "project_cost = get_cost(326, 125, 240, 11)\n",
+        "\n",
+        "print(project_cost)  # Expected output: 20.6708\n",
+        "\n",
+        "# Check your answer"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "fLMr79i2opqu",
+        "outputId": "70025150-709b-4f8b-eded-0e0efb537850"
+      },
+      "execution_count": 36,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "20.670833333333334\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import math  # Importing math for math.ceil()\n",
+        "\n",
+        "def get_actual_cost(sqft_walls, sqft_ceiling, sqft_per_gallon, cost_per_gallon):\n",
+        "    total_sqft = sqft_walls + sqft_ceiling\n",
+        "    gallons_needed = math.ceil(total_sqft / sqft_per_gallon)  # Round up to whole gallons\n",
+        "    cost = gallons_needed * cost_per_gallon\n",
+        "    return cost\n",
+        "\n",
+        "# Check your answer\n",
+        "\n",
+        "# Test cases\n",
+        "print(get_actual_cost(322, 100, 318, 10))  # Expected output: 20\n",
+        "print(get_actual_cost(472, 306, 318, 13))  # Expected output: 39"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "h3y_tC03pd_b",
+        "outputId": "0e98fd94-befc-4867-ffad-4fe8ff41255c"
+      },
+      "execution_count": 38,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "20\n",
+            "39\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
