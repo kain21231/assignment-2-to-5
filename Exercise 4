@@ -1,0 +1,259 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNlFLKjIQz7J3O/GYhr/uC+",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/kain21231/assignment-2-to-5/blob/main/Exercise%204\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def get_grade(score):\n",
+        "    if score >= 90:\n",
+        "        return \"A\"\n",
+        "    elif score >= 80:\n",
+        "        return \"B\"\n",
+        "    elif score >= 70:\n",
+        "        return \"C\"\n",
+        "    elif score >= 60:\n",
+        "        return \"D\"\n",
+        "    else:\n",
+        "        return \"F\"\n",
+        "\n",
+        "# Check your answer\n",
+        "\n",
+        "# Test cases\n",
+        "print(get_grade(41))  # Expected output: \"F\"\n",
+        "print(get_grade(77))  # Expected output: \"C\n",
+        "print(get_grade(89))  # Expected output: \"B\"\n",
+        "print(get_grade(64))  # Expected output: \"D\"\n",
+        "print(get_grade(97))  # Expected output: \"A\"\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "h1teRzkIuVjq",
+        "outputId": "5ef4bb2d-00d9-4b49-f9a9-8725ef3c5002"
+      },
+      "execution_count": 47,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "F\n",
+            "C\n",
+            "B\n",
+            "D\n",
+            "A\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def cost_of_project(engraving, solid_gold):\n",
+        "    if solid_gold == True:\n",
+        "        base_cost = 20000\n",
+        "        cost_per_unit = 350\n",
+        "    else:\n",
+        "        base_cost = 340\n",
+        "        cost_per_unit = 14\n",
+        "\n",
+        "    engraving_cost = len(engraving) * cost_per_unit\n",
+        "    total_cost = base_cost + engraving_cost\n",
+        "\n",
+        "    return total_cost\n",
+        "\n",
+        "# Check your answer"
+      ],
+      "metadata": {
+        "id": "9WiPKlQ7vJua"
+      },
+      "execution_count": 49,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def get_water_bill(num_gallons):\n",
+        "    if num_gallons <= 8000:\n",
+        "        bill = (num_gallons / 1000) * 5\n",
+        "    elif num_gallons <= 22000:\n",
+        "        bill = (num_gallons / 1000) * 6\n",
+        "    elif num_gallons <= 30000:\n",
+        "        bill = (num_gallons / 1000) * 7\n",
+        "    else:\n",
+        "        bill = (num_gallons / 1000) * 10\n",
+        "\n",
+        "    return bill\n",
+        "\n",
+        "# Check your answer\n",
+        "\n",
+        "# Test cases\n",
+        "print(get_water_bill(145000))   # Expected output: 1450.0\n",
+        "print(get_water_bill(3000))   # Expected output: 15.0\n",
+        "print(get_water_bill(12))       # Expected output: 0.6\n",
+        "print(get_water_bill(14.75))    # Expected output: 0.07375\n",
+        "print(get_water_bill(6500))   # Expected output:32.5"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "rLE4is7kvfq7",
+        "outputId": "3b7b21a9-16a9-4bb0-cfb2-bd4ef8cf91b3"
+      },
+      "execution_count": 52,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1450.0\n",
+            "15.0\n",
+            "0.06\n",
+            "0.07375\n",
+            "32.5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def get_phone_bill(gb):\n",
+        "    base_cost = 100  # Flat fee for 15GB\n",
+        "    if gb <= 15:\n",
+        "        return base_cost  # No overage charge\n",
+        "\n",
+        "    # Calculate extra data used (in GB) and charge $100 per extra GB\n",
+        "    extra_gb = gb - 15\n",
+        "    extra_cost = extra_gb * 100\n",
+        "\n",
+        "    return base_cost + extra_cost  # Total bill\n",
+        "\n",
+        "# Check your answer\n",
+        "\n",
+        "# Test cases\n",
+        "print(get_phone_bill(13))    # Expected: 100.0\n",
+        "print(get_phone_bill(17))    # Expected: 300.0\n",
+        "print(get_phone_bill(9.9))  # Expected: 100\n",
+        "print(get_phone_bill(19.9))  # Expected: 589.999\n",
+        "print(get_phone_bill(26.5))    # Expected: 1250.0"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ylt5D1jPwPtl",
+        "outputId": "1ffafc40-85cd-4d41-b6be-1967189050c8"
+      },
+      "execution_count": 54,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "100\n",
+            "300\n",
+            "100\n",
+            "589.9999999999999\n",
+            "1250.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def get_labels(food_type, serving_size, calories_per_serving, saturated_fat_g, trans_fat_g, sodium_mg, sugars_g):\n",
+        "    # Dummy function, replace with your actual implementation\n",
+        "    print(f\"Labels for {food_type}: serving_size={serving_size}, calories={calories_per_serving}, saturated_fat={saturated_fat_g}\")\n",
+        "\n",
+        "# Zucaritas Cereal\n",
+        "food_type = \"solid\"\n",
+        "serving_size = 30 # (grams)\n",
+        "calories_per_serving = 120\n",
+        "saturated_fat_g = 0.1\n",
+        "trans_fat_g = 0\n",
+        "sodium_mg = 190\n",
+        "sugars_g = 10\n",
+        "get_labels(\"solid\", 30, 120, 0.1, 0, 190, 10)\n",
+        "\n",
+        "# Mozzarella Sticks\n",
+        "food_type = \"solid\"\n",
+        "serving_size = 28 # (grams)\n",
+        "calories_per_serving = 80\n",
+        "saturated_fat_g = 2.5\n",
+        "trans_fat_g = 0\n",
+        "sodium_mg = 200\n",
+        "sugars_g = 0\n",
+        "get_labels(\"solid\", 28, 80, 2.5, 0, 200, 0)\n",
+        "\n",
+        "# Pillsbury Cookies\n",
+        "food_type = \"solid\"\n",
+        "serving_size = 33 # (grams)\n",
+        "calories_per_serving = 150\n",
+        "saturated_fat_g = 3.5\n",
+        "trans_fat_g = 0\n",
+        "sodium_mg = 135\n",
+        "sugars_g = 9\n",
+        "get_labels(\"solid\", 33, 150, 3.5, 0, 135, 9)\n",
+        "\n",
+        "# Sunkist Orange Soda\n",
+        "food_type = \"liquid\"\n",
+        "serving_size = 355 # (milliliters)\n",
+        "calories_per_serving = 190\n",
+        "saturated_fat_g = 0\n",
+        "trans_fat_g = 0\n",
+        "sodium_mg = 60\n",
+        "sugars_g = 50\n",
+        "get_labels(\"liquid\", 355, 190, 0, 0, 60, 50)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "9G44pHPFxell",
+        "outputId": "c720f54a-838c-42f9-9e79-99dee993b278"
+      },
+      "execution_count": 59,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Labels for solid: serving_size=30, calories=120, saturated_fat=0.1\n",
+            "Labels for solid: serving_size=28, calories=80, saturated_fat=2.5\n",
+            "Labels for solid: serving_size=33, calories=150, saturated_fat=3.5\n",
+            "Labels for liquid: serving_size=355, calories=190, saturated_fat=0\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
