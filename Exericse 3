@@ -1,0 +1,198 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyN7aM+9/8ikb361m992ZdWu",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/kain21231/assignment-2-to-5/blob/main/Exericse%203\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Define a float\n",
+        "y = 1.\n",
+        "print(y)\n",
+        "print(type(y))\n",
+        "\n",
+        "# Convert float to integer with the int function\n",
+        "z = int(y)\n",
+        "print(z)\n",
+        "print(type(z))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "JOXzkFV7rVM-",
+        "outputId": "b1c9d5ce-0146-4da3-bcfb-4cde807cecd9"
+      },
+      "execution_count": 39,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1.0\n",
+            "<class 'float'>\n",
+            "1\n",
+            "<class 'int'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(int(1.2321))   # Output: 1\n",
+        "print(int(1.747))    # Output: 1\n",
+        "print(int(-3.94535)) # Output: -3\n",
+        "print(int(-2.19774)) # Output: -2"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "hW_I9GFRrXa8",
+        "outputId": "c0d431a9-af0e-4f38-e3ee-cdee0d3fe6fa"
+      },
+      "execution_count": 40,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "1\n",
+            "-3\n",
+            "-2\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Uncomment and run this code to get started!\n",
+        "print(4 * 1)\n",
+        "print(2.7 * 1)\n",
+        "print(type(\"qrs\" * 0))\n",
+        "print(len(\"abc\" * 0))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "AHPZ9ZNrrgE0",
+        "outputId": "a63748d2-f064-4d5c-d37f-aa107e844cb8"
+      },
+      "execution_count": 41,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "4\n",
+            "2.7\n",
+            "<class 'str'>\n",
+            "0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(False + False)\n",
+        "print(True + False)\n",
+        "print(False + True)\n",
+        "print(True + True)\n",
+        "print(False + True + True + True)\n",
+        "# Check your answer"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3-5sFbGksCOk",
+        "outputId": "43de35c8-f343-40f2-cd17-d4f40eb6d732"
+      },
+      "execution_count": 43,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "0\n",
+            "1\n",
+            "1\n",
+            "2\n",
+            "3\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def cost_of_project(engraving, solid_gold):\n",
+        "    # Determine base cost\n",
+        "    base_cost = 200000 if solid_gold else 15000\n",
+        "\n",
+        "    # Determine engraving cost\n",
+        "    cost_per_unit = 10 if solid_gold else 7\n",
+        "    engraving_cost = len(engraving) * cost_per_unit\n",
+        "\n",
+        "    # Total cost\n",
+        "    total_cost = base_cost + engraving_cost\n",
+        "    return total_cost\n",
+        "\n",
+        "# Check your answer\n",
+        "\n",
+        "# Test cases\n",
+        "project_one = cost_of_project(\"Kaingu Ringa\", True)\n",
+        "print(project_one)  # Expected output: 200120\n",
+        "\n",
+        "project_two = cost_of_project(\"20/02/2025\", False)\n",
+        "print(project_two)  # Expected output: 15070"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "D4rQ0JZQsSEd",
+        "outputId": "46877d12-9b86-46a3-dcf5-cbcce99ed20b"
+      },
+      "execution_count": 45,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "200120\n",
+            "15070\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
